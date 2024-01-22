@@ -1,4 +1,13 @@
+// Load DayJS advanced format plugin.
+dayjs.extend(window.dayjs_plugin_advancedFormat)
+
 // 01. Display current day at the top of the calender when a user opens the planner.
+var currentDay = dayjs();
+$("#currentDay").text(currentDay.format("dddd, MMM Do YYYY"));
+
+
+
+
 
 // 02. Present timeblocks for standard business hours when the user scrolls down.
 
