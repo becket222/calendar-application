@@ -10,6 +10,7 @@ function colourCode() {
     // Assign current hour to variable
     var currentHour = dayjs();
     
+    // Loop over timeblocks
     $(".time-block").each(function() {
         var timeSlot = parseInt($(this).attr("id").split(".hour")[1]);
 
@@ -39,6 +40,19 @@ function colourCode() {
 // 04. Allow a user to enter an event when they click a timeblock.
 
 // 05. Save event in local storage when the save button is clicked in that timeblock.
+function saveEventBtn() {
+    var saveBtn = $(".saveBtn");
+    saveBtn.on("click", function() {
+        // var hourBlock = $(this).children(".hour")
+        // var userTask = $(this).children(".plan")
+
+        // Save user task in local storage
+        localStorage.setItem(hourBlock, userTask);
+
+    });
+
+
+}
 
 // 06. Persist events between refreshes of a page.
 
