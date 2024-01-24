@@ -46,7 +46,12 @@ function saveEventBtn() {
         // var hourBlock = $(this).children(".hour")
         // var userTask = $(this).children(".plan")
 
-        // Save user task in local storage
+        // $(document).ready(function(){ ??????????
+        // https://www.w3schools.com/jquery/traversing_children.asp
+        // https://www.w3schools.com/jquery/jquery_traversing_siblings.asp
+
+
+        // Save user tasks in local storage
         localStorage.setItem(hourBlock, userTask);
 
     });
@@ -55,6 +60,16 @@ function saveEventBtn() {
 }
 
 // 06. Persist events between refreshes of a page.
+function persistEvents() {
+    // For each hourSlot
+    $(".hour").each(function() {
 
+        // localStorage.getItem()
 
+    })
+
+}
+
+// Call functions
 colourCode();
+persistEvents();
